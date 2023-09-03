@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 10px;
+      margin-left: 20px;
+    
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 60%;
+      padding: 4px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: #555;
+    }
+
+    .form-group input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #0069d9;
+    }
+
+    .form-group input[type="submit"]:focus {
+      outline: none;
+    }
+        img {
+            margin-left: 60px;
+            margin-top: 0px;
+            padding: 0px;
+            width: 70px;
+           height: 70px;
+            border-radius: 100px;
+            margin-bottom: 0px;
+          
+        }
+.img:hover{
+    transform: scale(1.1) rotate(360deg);
+}
+
+
+.logo{
+  margin:0px;
+  display: flex;
+  padding: 0px;
+ 
+width: 120px;
+height: 120px;
+ 
+}
+.e_letter{
+          color: purple;
+             }
+      
+.tagline{
+  color: rgb(17, 15, 15);
+            margin-top: 0px;
+            margin-left: 40px;
+            display: inline-block;
+            font-size: 30px;
+            font-weight: bold;
+            font-style: normal;
+        
+}
+
+  </style>
+</head>
+<body >
+  <div class="logo-container">
+    <img class="logo" src="images/20230608_120131 (1).png" >
+    <h1 class="tagline"><span class="e_letter">M</span>oNeY_<span class="a_letter">4</span>R_<span class="a_letter">Y</span>oU</h1>
+
+   
+    <h2 style="margin-left: 110px;">Login </h2>
+    <form action="/login" method="post" style="margin-left: 110px;">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required="">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required="">
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Login">
+
+      </div>
+    </form>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.querySelector('form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Retrieve the submitted email and password
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+       
+
+
+
+
+
+//here we have to change 
+
+
+
+        if (email === 'example@example.com' && password === 'password') {
+          // Redirect to the profile.html file
+          window.location.href = 'profile.html';
+        }
+
+
+
+        if (email === 'prem@example.com' && password === 'password') {
+          // Redirect to the profile.html file
+          window.location.href = 'prem.html';
+        }
+        if (email === 'vinaydr200310@gmail.com' && password === 'vinay@123') {
+          // Redirect to the profile.html file
+          window.location.href = 'vinay.html';
+        }
+
+        
+         else {
+          // Invalid credentials, show an error message
+          var errorElement = document.createElement('p');
+          errorElement.textContent = 'Login failed. Invalid email or password.';
+          document.body.appendChild(errorElement);
+        }
+      });
+    });
+
+
+
+  </script>
+
+
+</body></html>
